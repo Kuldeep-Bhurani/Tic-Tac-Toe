@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Poppins&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav {
+	background-color: black;
+	color: white;
+	height: 65px;
+	font-size: 27px;
+	display: flex;
+	align-items: center;
+	padding: 0 12px;
+	font-family: "Poppins", sans-serif;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	font-size: 1.5rem;
+}
+
+.gameContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.container {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, 10vw);
+	grid-template-rows: repeat(3, 10vw);
+	font-family: "Poppins", sans-serif;
+}
+
+.box {
+	border: 2px solid black;
+	font-size: 8vw;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box:hover {
+	background-color: rgb(212, 212, 231);
+}
+
+.gameInfo {
+	padding: 34px;
+	font-family: "Baloo Da 2", cursive;
+	font-size: 1.4rem;
+}
+
+.imgBox img {
+	width: 0;
+	transition: width 1s ease-in-out;
+}
+
+.br-0 {
+	border-right: 0;
+}
+
+.bl-0 {
+	border-left: 0;
+}
+
+.bt-0 {
+	border-top: 0;
+}
+
+.bb-0 {
+	border-bottom: 0;
+}
+
+#reset {
+	margin: 0 10px;
+	padding: 5px 20px;
+	cursor: pointer;
+	border-radius: 10px;
+	background-color: peachpuff;
+	color: black;
+	font-family: "Poppins", sans-serif;
+}
+
+#reset:hover {
+	background-color: rgb(240, 221, 204);
+}
+
+.line {
+	background-color: #000;
+	height: 3px;
+	position: absolute;
+	left: 0;
+	width: 0;
+	transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+	.gameContainer {
+		flex-wrap: wrap;
+	}
+	.gameInfo {
+		margin-top: 50px;
+		font-size: 1.2rem;
+	}
+	.container {
+		grid-template-columns: repeat(3, 20vw);
+		grid-template-rows: repeat(3, 20vw);
+	}
+}
